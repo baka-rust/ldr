@@ -30,4 +30,15 @@ function utility:print_table(tab)
     end
 end
 
+function utility:create_grid(width, height, default_entry)
+    local grid = {}
+    for i = 1, width do
+        grid[i] = {}
+        for j = 1, height do
+            grid[i][j] = default_entry
+        end
+    end
+    return grid
+end
+
 return utility
